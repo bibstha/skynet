@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# trap TERM and change to KILL
+trap 'echo killing $PID; kill -KILL $PID' TERM
+
+# program to run
+PWD=`pwd`
+memcached -v
+
+# capture PID and wait
+PID=$!
+wait

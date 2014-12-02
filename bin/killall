@@ -1,0 +1,6 @@
+#!/bin/bash
+
+redis-cli shutdown save
+
+brew services stop memcached
+

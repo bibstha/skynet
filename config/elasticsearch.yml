@@ -1,0 +1,2 @@
+cluster.name: elasticsearch-bis
+path.plugins: /usr/local/var/lib/elasticsearch/plugins

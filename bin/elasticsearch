@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# trap TERM and change to KILL
+trap 'echo killing $PID; kill -KILL $PID' TERM
+
+# program to run
+PWD=`pwd`
+elasticsearch -f -D es.config=$PWD/config/elasticsearch.yml
+
+# capture PID and wait
+PID=$!
+wait
